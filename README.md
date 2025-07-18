@@ -72,3 +72,4 @@ This is sample for project react. Use react-router
 - Khởi tạo Husky: npx husky install
 - Thêm vào scripts package.json: "prepare": "husky install"
 - Tạo Git hook để kiểm tra message commit(Tạo file .husky/commit-msg): npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$
+- Tạo file .gitattributes để tự động chuyển CRLF → LF khi commit: \* text=auto eol=lf d
