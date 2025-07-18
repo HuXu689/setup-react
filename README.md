@@ -107,6 +107,6 @@ List of tools used:
   git config --global alias.gcb 'checkout -b'
   git config --global alias.gl 'log --oneline --graph --decorate --all'
 
-git rebase -i HEAD~8: sửa log commit
+git rebase -i HEAD~8 || git rev-list --count HEAD: sửa log commit
 đổi pick thành squash để gộp commit>nhấn esc>gõ:wq>enter
 git push origin master --force: push lại code ghi đè lịch sử commit của local lên repo
