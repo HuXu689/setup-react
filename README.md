@@ -23,13 +23,13 @@ This is sample for project react. Use react-router
 - Đến (5.)
 - Thêm vào scripts package.json: "start:csr": "vite preview --port 3000"
 
-3. Format code all file
+3. Format code all file with prettier
 
 - Cài thư viện: npm i prettier -D
 - Thêm vào scripts package.json: "prettier": "prettier --check .", "prettier:fix": "prettier --write ."
 - Chạy: npm run prettier, npm run prettier:fix
 
-4. Format eslint all file
+4. Format eslint all file: Kiểm tra code style
 
 - Sửa file eslint.config.js theo https://github.com/vitejs/vite/blob/main/packages/create-vite/template-react-ts/eslint.config.js
 - Thêm globalIgnores(['dist', 'build', 'node_modules', 'react-router', 'coverage', 'public', 'out', 'lib']) để loại bỏ thư mục không cần theo eslint
@@ -62,9 +62,15 @@ This is sample for project react. Use react-router
   devSourcemap: true, // Enable sourcemap CSS when dev
   },
 
-8. Cài Husky: Tự động chạy các lệnh trước khi commit/push code (Như check format code prettier hay eslint)
+8. Cài Husky và committlint: Tự động chạy các lệnh trước khi commit/push code (Như check format code prettier hay eslint), kiểm tra chặn commit sai cú pháp:
+   Ví dụ mục đích và cách viết
+   Thêm tính năng: "feat: thêm trang giỏ hàng"
+   Sửa lỗi: "fix: sửa lỗi đăng nhập"
+   Cập nhật phụ: "chore: update dependencies"
+   Refactor code: "refactor: tách component"
+   Viết test: "test: thêm test cho nút Save"
 
-- Tạo file commitlint.config.js:
+- Tạo file commitlint.config.cjs:
   module.exports = {
   extends: ['@commitlint/config-conventional'],
   }
@@ -72,4 +78,11 @@ This is sample for project react. Use react-router
 - Khởi tạo Husky: npx husky install
 - Thêm vào scripts package.json: "prepare": "husky install"
 - Tạo Git hook để kiểm tra message commit(Tạo file .husky/commit-msg): npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$
-- Tạo file .gitattributes để tự động chuyển CRLF → LF khi commit: \* text=auto eol=lf d
+- Tạo file .gitattributes để tự động chuyển CRLF → LF khi commit: \* text=auto eol=lf
+- Sửa file commit-msg (Trong foulder .husky):
+  #!/usr/bin/env sh
+  npx --no -- commitlint --edit "$1"
+- Sửa file pre-commit (Trong foulder .husky):
+  #!/usr/bin/env sh
+  npm run lint
+  npm run prettier:fix
