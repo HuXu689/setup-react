@@ -2,6 +2,10 @@
 
 This is sample for project react. Use react-router
 
+List các công cụ sử dụng:
+
+- Prettier, ESLint, Husky và committlint
+
 1. Giải thích file
    tsconfig.jso : chứa các edit về typescript
    react-router.config.ts: bật tắt chế độ SSR hoặc CSR (SSR cần cài nodejs để chạy, CSR không cần: theo dõi thư mục build, buld trước start:csr sau)
@@ -86,3 +90,19 @@ This is sample for project react. Use react-router
   #!/usr/bin/env sh
   npm run lint
   npm run prettier:fix
+
+9. Tip dùng git:
+
+- git gcam "feat: thêm chức năng tìm kiếm" || git commit -am "feat: thêm chức năng tìm kiếm" : Tự động git add và git commit
+- git gp || git push : Đẩy code lên GitHub
+- git gst || git status : Kiểm tra trạng thái file
+- git gco <branch> || git checkout <branch> : Chuyển nhánh
+- git gcb <branch> || git checkout -b <branch> : Tạo nhánh mới
+- git gl || git log --oneline --graph --decorate --all : Xem lịch sử commit dạng cây
+  Cách setup:
+  git config --global alias.gcam 'commit -am'
+  git config --global alias.gp 'push'
+  git config --global alias.gst 'status'
+  git config --global alias.gco 'checkout'
+  git config --global alias.gcb 'checkout -b'
+  git config --global alias.gl 'log --oneline --graph --decorate --all'
