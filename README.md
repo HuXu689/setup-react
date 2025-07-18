@@ -2,7 +2,9 @@
 
 This is sample for project react. Use react-router
 
-List of tools used: Prettier, ESLint, Husky và committlint
+List of tools used:
+
+- Prettier, ESLint, Husky và committlint
 
 1. Giải thích file
    tsconfig.jso : chứa các edit về typescript
