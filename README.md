@@ -82,7 +82,8 @@ List of tools used:
 - Khởi tạo Husky: npx husky install
 - Thêm vào scripts package.json: "prepare": "husky install"
 - Tạo Git hook để kiểm tra message commit(Tạo file .husky/commit-msg): npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$
-- Tạo file .gitattributes để tự động chuyển CRLF → LF khi commit: \* text=auto eol=lf
+- Tạo file .gitattributes để tự động chuyển CRLF → LF khi commit: "\* text=auto"
+
 - Sửa file commit-msg (Trong foulder .husky):
   #!/usr/bin/env sh
   npx --no -- commitlint --edit "$1"
@@ -106,3 +107,9 @@ List of tools used:
   git config --global alias.gco 'checkout'
   git config --global alias.gcb 'checkout -b'
   git config --global alias.gl 'log --oneline --graph --decorate --all'
+
+git rebase -i HEAD~8 || git rev-list --count HEAD: sửa log commit
+đổi pick thành squash để gộp commit>nhấn esc>gõ:wq>enter
+git push origin master --force: push lại code ghi đè lịch sử commit của local lên repo
+git rebase --abort: hủy bỏ quá trình rebase
+

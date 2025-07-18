@@ -13,7 +13,7 @@ indent_style = space
 indent_size = 2
 
 # Kết thúc mỗi dòng bằng ký tự xuống dòng kiểu UNIX (LF)
-end_of_line = lf
+end_of_line = auto
 
 # Tự động thêm dòng trống ở cuối mỗi file khi lưu
 insert_final_newline = true
