@@ -83,6 +83,7 @@ List of tools used:
 - Thêm vào scripts package.json: "prepare": "husky install"
 - Tạo Git hook để kiểm tra message commit(Tạo file .husky/commit-msg): npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$
 - Tạo file .gitattributes để tự động chuyển CRLF → LF khi commit: "\* text=auto"
+
 - Sửa file commit-msg (Trong foulder .husky):
   #!/usr/bin/env sh
   npx --no -- commitlint --edit "$1"
