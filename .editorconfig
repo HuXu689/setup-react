@@ -1,0 +1,27 @@
+# Đây là file .editorconfig ở cấp cao nhất (gốc)
+root = true
+
+# Thiết lập áp dụng cho tất cả các file
+[*]
+# Bộ mã hóa ký tự: UTF-8 là chuẩn phổ biến nhất
+charset = utf-8
+
+# Dùng dấu cách (space) để thụt đầu dòng (indent), thay vì tab
+indent_style = space
+
+# Số lượng khoảng trắng dùng cho mỗi lần thụt dòng (vd: 2 spaces)
+indent_size = 2
+
+# Kết thúc mỗi dòng bằng ký tự xuống dòng kiểu UNIX (LF)
+end_of_line = lf
+
+# Tự động thêm dòng trống ở cuối mỗi file khi lưu
+insert_final_newline = true
+
+# Xóa khoảng trắng thừa ở cuối mỗi dòng khi lưu
+trim_trailing_whitespace = true
+
+# Thiết lập riêng cho các file Markdown (*.md)
+[*.md]
+# Không xóa khoảng trắng cuối dòng (cần thiết để xuống dòng trong Markdown)
+trim_trailing_whitespace = false
