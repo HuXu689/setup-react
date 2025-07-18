@@ -71,4 +71,4 @@ This is sample for project react. Use react-router
 - Cài thư viện: npm install --save-dev husky @commitlint/config-conventional @commitlint/cli
 - Khởi tạo Husky: npx husky install
 - Thêm vào scripts package.json: "prepare": "husky install"
-- Tạo Git hook để kiểm tra message commit(Tạo file .husky/commit-msg): npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$ h
+- Tạo Git hook để kiểm tra message commit(Tạo file .husky/commit-msg): npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$
