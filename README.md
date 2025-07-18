@@ -110,3 +110,4 @@ List of tools used:
 git rebase -i HEAD~8 || git rev-list --count HEAD: sửa log commit
 đổi pick thành squash để gộp commit>nhấn esc>gõ:wq>enter
 git push origin master --force: push lại code ghi đè lịch sử commit của local lên repo
+git rebase --abort: hủy bỏ quá trình rebase
