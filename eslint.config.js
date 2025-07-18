@@ -36,7 +36,7 @@ export default tseslint.config([
       // Tắt bắt buộc chỉ export component trong file
       'react-refresh/only-export-components': 'off',
       // Cho phép destructuring object rỗng ({} = ...)
-      'no-empty-pattern': 'off'
+      'no-empty-pattern': 'off',
     },
   },
 ])
